@@ -3,8 +3,19 @@
 
 void NewArray()
 {
+    Console.Write("Введите размер массива: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    string[] array = new string[size];
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите {i} элемент массива: ");
+        array[i] = Console.ReadLine();
+    }
+
+    /*Это метод ввода массива не через консоль.
     string[] array = { "sdaesdfgh", "a4", "hello", "3", "computer", "Moscow", "-1", ":-)" };
-    int size = array.Length;
+    int size = array.Length;*/
+
     string[] newArray = new string[size];
     int newArraySize = 0;
     for (int i = 0; i < size; i++)
@@ -17,7 +28,7 @@ void NewArray()
     }
     if (newArraySize == 0)
     {
-        Console.WriteLine("В веденном массиве все строки содержат больше трёх символов.");
+        Console.WriteLine("В введённом массиве все строки содержат больше трёх символов.");
     }
     else
     {
